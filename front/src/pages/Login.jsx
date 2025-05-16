@@ -1,12 +1,20 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import { FiEye } from 'react-icons/fi';
 import headerImage from '../../images/header_image.svg';
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+
+    navigate('/home');
+  };
+
   return (
-    <><div className={styles.loginContainer}>
+    <div className={styles.loginContainer}>
       <div className={styles.loginLeft}>
         <h2>Login</h2>
         <p className={styles.subtitle}>Bem-vindo(a) de volta!</p>
@@ -36,18 +44,21 @@ export default function Login() {
         </div>
 
         <div className={styles.buttonGroup}>
-          <button className={styles.loginBtn}>Login</button>
+          <button className={styles.loginBtn} onClick={handleLogin}>Login</button>
           <button className={styles.registerBtn}>Cadastro</button>
         </div>
       </div>
 
       <div className={styles.loginRight}>
-        <a href="#">Página inicial</a>
-        <a href="#">Sensores</a>
-        <a href="#">Dados</a>
-        <img src={headerImage} alt="Ideia brilhante" />
+        <div className={styles.rightContent}>
+          <div className={styles.navLinks}>
+            <Link to="/home">Página inicial</Link>
+            <Link to="/sensores">Sensores</Link>
+            <Link to="/dados">Dados</Link>
+          </div>
+          <img src={headerImage} alt="Ideia brilhante" />
+        </div>
       </div>
     </div>
-   </>
   );
 }

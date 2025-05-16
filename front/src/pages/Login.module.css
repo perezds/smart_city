@@ -90,6 +90,7 @@ h2 {
   padding: 10px 24px;
   font-weight: bold;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .registerBtn {
@@ -99,23 +100,42 @@ h2 {
   padding: 10px 24px;
   font-weight: bold;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .loginRight {
   background-color: #d17500;
-  display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.navLinks a {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #ffd699;
+  text-decoration: underline;
 }
 
 .loginRight img {
   width: 60%;
   max-width: 400px;
-}
-
-.loginRight a {
-  color: white;
-  display: flex;
-  justify-content: space-around;
-
 }
