@@ -1,22 +1,31 @@
-import { FaTachometerAlt, FaMapMarkedAlt, FaBars, FaEnvelope, FaCogs, FaUserAlt, FaQuestionCircle } from 'react-icons/fa';
 import styles from './Sidebar.module.css';
+import {
+  FaTachometerAlt, FaMapMarkedAlt, FaBars,
+  FaEnvelope, FaCogs, FaUser, FaQuestionCircle
+} from 'react-icons/fa';
 
-export default function Sidebar() {
+const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
-      <h2 className={styles.title}>MENU</h2>
-      <ul className={styles.menu}>
-        <li><a href="/dashboard"><FaTachometerAlt /> Dashboard</a></li>
-        <li><a href="/mapas"><FaMapMarkedAlt /> Mapas</a></li>
-        <li><a href="/menu"><FaBars /> Menu</a></li>
-        <li><a href="/mensagens"><FaEnvelope /> Mensagem</a></li>
-      </ul>
-      <h2 className={styles.title}>OUTROS</h2>
-      <ul className={styles.menu}>
-        <li><a href="/configuracoes"><FaCogs /> Configurações</a></li>
-        <li><a href="/contas"><FaUserAlt /> Contas</a></li>
-        <li><a href="/ajuda"><FaQuestionCircle /> Ajuda</a></li>
-      </ul>
+      <div className={styles.logo}>Smart City</div>
+
+      <nav aria-label="Navegação principal">
+        <p className={styles.section}>MENU</p>
+        <ul>
+          <li><a href="/" className={styles.active}><FaTachometerAlt /> <span>Dashboard</span></a></li>
+          <li><a href="/mapas"><FaMapMarkedAlt /> <span>Mapas</span></a></li>
+          <li><a href="/menu"><FaBars /> <span>Menu</span></a></li>
+          <li><a href="/mensagens"><FaEnvelope /> <span>Mensagens</span></a></li>
+        </ul>
+        <p className={styles.section}>OUTROS</p>
+        <ul>
+          <li><a href="/config"><FaCogs /> <span>Configurações</span></a></li>
+          <li><a href="/contas"><FaUser /> <span>Contas</span></a></li>
+          <li><a href="/ajuda"><FaQuestionCircle /> <span>Ajuda</span></a></li>
+        </ul>
+      </nav>
     </aside>
   );
-}
+};
+
+export default Sidebar;

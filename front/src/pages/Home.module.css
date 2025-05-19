@@ -1,274 +1,85 @@
-/* Home.module.css */
+.layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb;
+}
 
-.dashboard {
-    display: flex;
-    height: 100vh;
-    background-color: #F9FAFB;
-    font-family: 'Segoe UI', sans-serif;
-    color: #111827;
-  }
-  
-  .sidebar {
-    width: 250px;
-    background-color: #1F2937;
-    color: #fff;
-    padding: 2rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #22D3EE;
-    margin-bottom: 1rem;
-  }
-  
-  .section {
-    font-size: 0.9rem;
-    font-weight: bold;
-    color: #9CA3AF;
-    margin-bottom: 0.5rem;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sidebar ul li a:hover,
-  .sidebar ul li a.active {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .mainContent {
-    flex: 1;
-    padding: 2rem;
-    overflow-y: auto;
-  }
-  
-  .topBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .searchWrapper {
-    display: flex;
-    align-items: center;
-    background: #F3F4F6;
-    border: 1px solid #D1D5DB;
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    transition: border 0.3s ease;
-  }
-  
-  .searchWrapper:focus-within {
-    border-color: #4F46E5;
-  }
-  
-  .searchIcon {
-    margin-right: 0.5rem;
-    color: #6B7280;
-  }
-  
-  .searchInput {
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 1rem;
-    width: 200px;
-    color: #111827;
-  }
-  
-  .iconRight {
-    font-size: 1.3rem;
-    color: #4B5563;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .iconRight:hover {
-    color: #111827;
-  }
-  
-  .userIcon {
-    width: 38px;
-    height: 38px;
-    background-color: #4F46E5;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    transition: transform 0.2s ease;
-  }
+.contentArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
 
-  .userMenu {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .userMenu:hover .userIcon {
-    transform: scale(1.05);
-  }
-  
-  .dropdown {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: white;
-    border: 1px solid #E5E7EB;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    display: none;
-    flex-direction: column;
-    min-width: 140px;
-    z-index: 99;
-  }
-  
-  .dropdown a {
-    padding: 0.75rem 1rem;
-    color: #111827;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: background-color 0.2s;
-  }
-  
-  .dropdown a:hover {
-    background-color: #F3F4F6;
-  }
-  
-  .userMenu:hover .dropdown {
-    display: flex;
-  }
-  
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .sectionTitle {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #111827;
-  }
-  
-  .alertBox {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background-color: #FBBF24;
-    padding: 1rem;
-    border-radius: 10px;
-    color: #78350F;
-    font-weight: 500;
-  }
-  
-  .alertIcon {
-    font-size: 1.2rem;
-  }
-  
-  .cardsRow, .variationRow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 1rem;
-    padding: 1.25rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    width: 200px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  }
-  
-  .cardIcon {
-    font-size: 1.5rem;
-    color: #4F46E5;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card h3 {
-    margin: 0.3rem 0;
-    font-size: 1.4rem;
-  }
-  
-  .card span {
-    font-size: 0.85rem;
-    color: #6B7280;
-  }
-  
-  .variationCard {
-    background-color: white;
-    border-radius: 1rem;
-    padding: 1.25rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    width: 220px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    position: relative;
-  }
-  
-  .variationCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  }
-  
-  .variationCard h3 {
-    margin: 0.3rem 0;
-    font-size: 1.4rem;
-  }
-  
-  .variationCard span {
-    font-size: 0.85rem;
-    color: #6B7280;
-  }
-  
-  .variationCard.green {
-    border-left: 6px solid #10B981;
-  }
-  
-  .variationCard.red {
-    border-left: 6px solid #EF4444;
-  }
-  
-  .variationCard.purple {
-    border-left: 6px solid #8B5CF6;
-  }
-  
-  .chartIcon {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    color: #8B5CF6;
-  }
-  
+.main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.alertBox {
+  background-color: #fef08a;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  color: #92400e;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.cardsRow,
+.variationRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card,
+.variationCard {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.card:hover,
+.variationCard:hover {
+  transform: translateY(-4px);
+}
+
+.card p,
+.variationCard p {
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.card h3,
+.variationCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: #111827;
+}
+
+.card span,
+.variationCard span {
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.green {
+  border-left: 5px solid #22c55e;
+}
+.red {
+  border-left: 5px solid #ef4444;
+}
+.purple {
+  border-left: 5px solid #8b5cf6;
+}
