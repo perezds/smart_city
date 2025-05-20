@@ -17,7 +17,7 @@
 
 .menuGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr); 
   gap: 24px;
 }
 
@@ -27,22 +27,32 @@
   padding: 24px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
   cursor: pointer;
   position: relative;
+  color: #333; 
 }
 
 .menuCard:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background-color: #007bff;
+  color: white; 
 }
+
 
 .menuIcon {
   font-size: 28px;
   color: #007bff;
   margin-bottom: 12px;
+  transition: color 0.3s;
 }
 
+.menuCard:hover .menuIcon,
+.menuCard:hover .menuCardDesc,
+.menuCard:hover .menuCardTitle {
+  color: white;
+}
 .menuCardTitle {
   font-weight: bold;
   font-size: 18px;
