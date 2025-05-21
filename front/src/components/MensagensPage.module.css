@@ -1,3 +1,14 @@
+.menuContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.menuContent {
+  flex: 1;
+  padding: 32px;
+  background-color: #f7f9fc;
+}
+
 .container {
   padding: 2rem;
   max-width: 1200px;

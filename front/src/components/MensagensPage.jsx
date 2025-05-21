@@ -41,12 +41,10 @@ export default function MensagensPage() {
   ];
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', backgroundColor: '#f7f9fc' }}>
-      <Sidebar />
-
-      <div style={{ flex: 1 }}>
-        <Header />
-
+    <div className={styles.menuContainer}>
+    <Sidebar />
+    <div className={styles.menuContent}>
+      <Header />
         <div className={styles.container}>
           <h2>Notificações</h2>
 

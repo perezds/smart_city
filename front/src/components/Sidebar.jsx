@@ -20,7 +20,6 @@ const Sidebar = () => {
         <p className={styles.section}>OUTROS</p>
         <ul>
           <li><a href="/config"><FaCogs /> <span>Configurações</span></a></li>
-          <li><a href="/contas"><FaUser /> <span>Contas</span></a></li>
           <li><a href="/ajuda"><FaQuestionCircle /> <span>Ajuda</span></a></li>
         </ul>
       </nav>

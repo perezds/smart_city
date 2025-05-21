@@ -9,8 +9,11 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-
     navigate('/home');
+  };
+
+  const handleRegister = () => {
+    navigate('/cadastro');
   };
 
   return (
@@ -45,7 +48,13 @@ export default function Login() {
 
         <div className={styles.buttonGroup}>
           <button className={styles.loginBtn} onClick={handleLogin}>Login</button>
-          <button className={styles.registerBtn}>Cadastro</button>
+          <button className={styles.registerBtn} onClick={handleRegister}>Cadastro</button>
+        </div>
+
+        {/* Bloco de sugestão de cadastro */}
+        <div className={styles.signupSuggestion}>
+          <span>Não tem uma conta?</span>
+          <Link to="/cadastro" className={styles.signupLink}>Cadastrar conta</Link>
         </div>
       </div>
 

@@ -6,13 +6,7 @@ import Sidebar from "./Sidebar";
 import { Settings, User, Rss } from "lucide-react";
 
 const menuItems = [
-  {
-    title: "Geral",
-    icon: <Settings className={styles.icone} />,
-    desc: "Configurações iniciais do sistema",
-    link: "/settings/geral",
-  },
-  {
+ {
     title: "Perfil",
     icon: <User className={styles.icone} />,
     desc: "Informações da sua conta e usuário",
