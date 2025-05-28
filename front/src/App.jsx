@@ -8,6 +8,7 @@ import Profile from './components/Profile';
 import Footer from './components/Footer';
 import Sensores from './components/Sensores'
 import Cadastro from './pages/Cadastro';
+import MapaPage from './components/MapaPage';
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/home" element={<Home />} />
         <Route path="/config" element={<SettingsPage />} />
+        <Route path="/mapa" element={<MapaPage/>} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/mensagens" element={<MensagensPage />} />
         <Route path="/settings/sensores" element={<Sensores />} />

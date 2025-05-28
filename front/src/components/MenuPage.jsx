@@ -7,9 +7,9 @@ export default function Menu() {
   const menuItems = [
     { title: 'Dashboard', icon: <FaTachometerAlt />, desc: 'Resumo em tempo real dos sensores.', link: '/home' },
     { title: 'Mapas', icon: <FaMapMarkedAlt />, desc: 'Visualização dos sensores no mapa.', link: '/mapas' },
-    { title: 'Mensagem', icon: <FaEnvelope />, desc: 'Avisos e alertas.', link: '/mensagens' },
+    { title: 'Notificações', icon: <FaEnvelope />, desc: 'Avisos e alertas.', link: '/mensagens' },
     { title: 'Configurações', icon: <FaCogs />, desc: 'Ajuste o sistema conforme necessário.', link: '/configuracoes' },
-    { title: 'Contas', icon: <FaUserAlt />, desc: 'Gerenciamento de usuários.', link: '/contas' },
+    { title: 'Contas', icon: <FaUserAlt />, desc: 'Gerenciamento de usuários.', link: '/profile' },
     { title: 'Ajuda', icon: <FaQuestionCircle />, desc: 'Central de ajuda e FAQ.', link: '/ajuda' }
   ];
 

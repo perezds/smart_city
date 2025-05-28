@@ -1,6 +1,8 @@
 import styles from './Home.module.css';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/HeaderHome';
+import MapaEscola from '../components/MapaEscola';
+
 
 const Home = () => {
   return (
