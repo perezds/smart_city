@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Sensores from './components/Sensores'
 import Cadastro from './pages/Cadastro';
 import MapaPage from './components/MapaPage';
+import Ajuda from './components/Ajuda';
 
 function App() {
   const location = useLocation();
@@ -23,12 +24,14 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/ajuda" element={<Ajuda/>} />
         <Route path="/config" element={<SettingsPage />} />
         <Route path="/mapa" element={<MapaPage/>} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/mensagens" element={<MensagensPage />} />
         <Route path="/settings/sensores" element={<Sensores />} />
         <Route path="/settings/perfil" element={<Profile />} />
+       
       </Routes>
 
       {shouldShowFooter && <Footer />}
